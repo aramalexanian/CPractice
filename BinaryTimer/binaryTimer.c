@@ -2,6 +2,13 @@
 #include <assert.h>
 #include <time.h>
 
+
+//Bits needed for shifting before printing
+enum timeBitshift {
+	HRS = 5,
+	MORS = 6
+};
+
 //Struct to show hours minutes and seconds
 typedef struct hms {
 	unsigned int hrs;
@@ -26,9 +33,9 @@ int main(void){
 		//Changes currentTime to the current time passed
 		secToHMS(dT, &currentTime);
 		//Prints the current time in bits
-		showNBits(currentTime.hrs, 5); printf(":");
-		showNBits(currentTime.mins, 6); printf(":");
-		showNBits(currentTime.secs, 6); printf("\r");
+		showNBits(currentTime.hrs, HRS); printf(":");
+		showNBits(currentTime.mins, MORS); printf(":");
+		showNBits(currentTime.secs, MORS); printf("\r");
 	}
 }
 
