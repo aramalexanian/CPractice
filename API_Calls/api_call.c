@@ -1,18 +1,17 @@
 #include <stdio.h>
 #include <curl/curl.h>
+#include <string.h>
+#include "api_call.h"
 
 
 int main(int argc, char *argv[])
 {
 	char* url = argv[1];
 
-	CURL *curl = curl_easy_init();
-	
-	if(curl) {
-		CURLcode result;
-		curl_easy_setopt(curl, CURLOPT_URL, url);
-		result = curl_easy_perform(curl);
-		printf("\n");
-	}
-	curl_easy_cleanup(curl);
+	char* url_return = NULL;
+
+	url_return = web_request(url);
+
+	printf("%s", url_return);
+
 }//End of main
