@@ -10,7 +10,7 @@ int main(int argc, char *argv[])
 
 	char* url_return = NULL;
 
-	url_return = web_request(url);
+	url_return = http_get_request(url);
 
 	printf("%s\n", url_return);
 
