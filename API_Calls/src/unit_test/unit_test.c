@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <curl/curl.h>
 #include <string.h>
-#include "api_call.h"
+#include "../api_call.h"
 
 int main(void){
 	printf("Test function char *web_request(char *url) with https://api.agify.io?name=Aram.\nExpected Result: Pass\n");

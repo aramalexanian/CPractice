@@ -12,6 +12,6 @@ int main(int argc, char *argv[])
 
 	url_return = web_request(url);
 
-	printf("%s", url_return);
+	printf("%s\n", url_return);
 
 }//End of main
